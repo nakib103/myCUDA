@@ -9,4 +9,5 @@ object_file = "add_cuda"
 object_file_path = os.path.join(current_dir, object_file)
 
 subprocess.run(["nvcc", cuda_program_path, "-o", object_file_path])
-subprocess.run([object_file_path], capture_output=True)
+p = subprocess.run([object_file_path], stdout=subprocess.PIPE)
+print(p.stdout)
