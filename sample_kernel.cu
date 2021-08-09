@@ -40,7 +40,7 @@ int main(){
     /*
     cudaDeviceSyncronize        - block CPU execution until kernel execution is done
     */
-    cudaDeviceSyncronize();
+    cudaDeviceSynchronize();
     
     // verify the operation is successful
     float maxError = 0.0f;
